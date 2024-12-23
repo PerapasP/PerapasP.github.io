@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 175%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.menu-item {
+    background-color: #999999;
+    border: 1px solid #000;
+    margin: 15px;
+    padding: 45px 15px 15px 15px;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 30px;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-size: 125%;
+}
+
+.title-chicken {
+    background-color: #ffb6c1;
+}
+
+.title-beef {
+    background-color: #cd5c5c;
+    color: white;
+}
+
+.title-sushi {
+    background-color: #f0e68c;
+}
+
+/* Desktop view */
+@media (min-width: 992px) {
+    .menu-item {
+        float: left;
+        width: calc(33.33% - 30px);
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu-item {
+        float: left;
+        width: calc(50% - 30px);
+    }
+    
+    .menu-item:last-child {
+        clear: both;
+        width: calc(100% - 30px);
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .menu-item {
+        width: calc(100% - 30px);
+    }
+}
+
+/* Clearfix */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
